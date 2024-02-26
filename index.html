@@ -1,0 +1,84 @@
+<head>
+  <title>game point five</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <div id="start" class="popup">
+    <h3 class="title">Gameplay</h3>
+    <div class="description">
+      <p>There are 4 stats: VIT, SPD, FRT, and DMG</p>
+      <p>VIT (Vitality) increases max health</p>
+      <p>SPD (Speed) increases the speed of the character</p>
+      <p>FRT (Firerate) increases how fast you can attack</p>
+      <p>DMG (Damage) increases how much damage you do</p>
+      <p>⠀</p>
+      <p>You can get XP by killing enemies that can harm you</p>
+      <p>Get enough XP and you level up, get 1 stat point, and go to max HP</p>
+      <p>Your score starts at 0, and your score goes up by surviving for longer</p>
+      <p>To move, use W/A/S/D, and you can aim and shoot with your mouse</p>
+      <p>You can upgrade stats with 1/2/3/4 to upgrade VIT/SPD/FRT/DMG</p>
+      <p>Green bar is XP, red bar is HP</p>
+      <p>There are several enemies, however I won't explain them - you have to figure them out.</p>
+      <p>Good Luck!</p>
+      <p>⠀</p>
+    </div>
+    <button id="begin" onclick="init()">Start</button>
+  </div>
+  
+  <div id="lose" class="popup" style="visibility: hidden;">
+    <h3 class="title">Game Over</h3>
+    <div id="losedesc" class="description">
+    </div>
+    <button class="begin" onclick="window.location = window.location">Restart</button>
+  </div>
+  
+  <div id="ui">
+    <div id="levels">
+      <p class="gameplay_stat" id="hp">HP: 1/2</p>
+      <p class="gameplay_stat" id="xp">XP: 3/4</p>
+      <p class="gameplay_stat" id="level">Level: 5</p>
+      <p class="gameplay_stat" id="score">Score: 6</p>
+      <p class="gameplay_stat" id="points">Points: 7</p>
+    </div>
+    
+    <div id="stats">
+      <div class="stat">
+        <p class="stat_count" id="vit">VIT: 8</p>
+        <button class="stat_upgrade" id="vit_upgrade">+</button>
+      </div>
+      
+      <div class="stat">
+        <p class="stat_count" id="spd">SPD: 0</p>
+        <button class="stat_upgrade" id="spd_upgrade">+</button>
+      </div>
+      
+      <div class="stat">
+        <p class="stat_count" id="frt">FRT: 1</p>
+        <button class="stat_upgrade" id="frt_upgrade">+</button>
+      </div>
+      
+      <div class="stat">
+        <p class="stat_count" id="dmg">DMG: 2</p>
+        <button class="stat_upgrade" id="dmg_upgrade">+</button>
+      </div>
+    </div>
+    
+    <div id="hpbar">
+      <div id="hpbarfill">
+      </div>
+    </div>
+    
+    <div id="xpbar">
+      <div id="xpbarfill">
+      </div>
+    </div>
+
+    <div id="rlbar">
+      <div id="rlbarfill"></div>
+    </div>
+  </div>
+  <canvas id="display"></canvas>
+  <script src="characters.js"></script>
+  <script src="script.js"></script>
+</body>
